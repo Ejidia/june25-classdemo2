@@ -1,0 +1,32 @@
+pipeline{
+  agent any
+
+  environment {
+    VENV = 'venv'
+  }
+  stages{
+    stage('checkout'){
+      steps{
+        git 'https://github.com/Ejidia/june25-classdemo2.git'
+      }
+    }
+    stage('setup virtualenv'){
+      steps{
+        sh '''
+        python3 -m venv $VENV
+        . $VENV/bin/activate 
+        pip install -r requirements.txt
+        
+      '''
+      }
+    }
+    stage('run tests'){
+      steps{
+        sh '''
+        . $VENV/bin/activate 
+        pytest
+        '''
+      }
+    }
+  }
+}
