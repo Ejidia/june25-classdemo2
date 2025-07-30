@@ -1,0 +1,15 @@
+name:  Names 
+
+on: 
+  push:  # Trigger on  code push
+
+jobs:
+  print-names:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name:  names
+        run: |
+          echo "Name: Uwabeza Ejidia"
+          echo "Name: Uwase Tesa"
+  
