@@ -26,7 +26,7 @@ jobs:
           python manage.py test
 
   lint:
-      - name: Code with pylint
+      - name: Lint Code
         runs-on: ubuntu-latest
         needs: test
 
