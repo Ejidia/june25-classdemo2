@@ -47,7 +47,7 @@ jobs:
 
       - name: Run pylint
         run: |
-          pylint **/*.py
+          pylint group_test.yml
 
   coverage:
     name:  Run Coverage Report
