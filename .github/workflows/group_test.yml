@@ -4,9 +4,8 @@ on: [push, pull_request]
 
 jobs:
   test:
-    name:  Run Tests
-    runs:
-      on: ubuntu-latest
+    name: Run Tests
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Code
